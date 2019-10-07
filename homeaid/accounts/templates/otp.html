@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="container">
+
+    <div class="box1 card">
+        <br>
+        <h1>Your OTP Code send ,<a href=""> {{uname}}!</a></h1>
+        <h3>Please Check your Your Mail..</h3>
+
+        <br>
+        {{otp_key}}<br>
+        {{mes}}
+        <form method="post">
+            {% csrf_token %}
+            <input type="number" name="otp_code" placeholder="Enter OTP " class="form-control">
+            <button type="submit" class="btn btn-success">verfiy</button>
+        </form>
+    </div>
+</div>
+{% endb
